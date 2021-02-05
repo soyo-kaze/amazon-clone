@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Amazon";
+  src: url("https://m.media-amazon.com/images/S/sash/pDxWAF1pBB0dzGB.woff2");
+}
+@font-face {
+  font-family: "Amazon-bold";
+  src: url("https://m.media-amazon.com/images/S/sash/KFPk-9IF4FqAqY-.woff2");
+}
+
+.header__nav {
+  width: 100%;
+  height: 60px;
+  justify-content: space-evenly;
+  display: flex;
+  /* flex-direction: row; */
+  background-color: #131921;
+  font-family: Amazon;
+  color: white;
+  position: fixed;
+  z-index: 200;
+}
+.header__first {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.header__logo {
+  padding: 1px;
+  padding-top: 10px;
+  padding-left: 10px;
+  object-fit: contain;
+  height: 30px;
+}
+#in {
+  font-size: 13px;
+}
+.address {
+  display: flex;
+  flex-direction: column;
+}
+.header__second {
+  display: flex;
+  padding: 15px;
+  align-items: flex-end;
+  justify-content: center;
+  text-decoration: none;
+}
+.upper__name {
+  font-size: 12px;
+}
+.lower__name {
+  font-family: Amazon-bold;
+  display: flex;
+  align-items: flex-end;
+}
+.header__options {
+  display: flex;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 25px;
+  justify-content: center;
+  flex-direction: column;
+}
+.header__search {
+  display: flex;
+  padding-left: 25px;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.header__search__bar {
+  height: 40px;
+  border: none;
+  /* width: 100%; */
+  flex: 1;
+}
+.header__search__select {
+  height: 42px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px 0px 0px 5px;
+  font-family: Amazon;
+  color: rgb(75, 75, 75);
+}
+.header__search__select {
+  border-radius: 5px 0px 0px 5px;
+  height: 42px;
+  background-color: #f3f3f3;
+
+  color: #5e5e5e;
+  font-size: 13px;
+  border-left: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-color: #a7a5a5;
+}
+.header__search__select:hover {
+  background-color: #acabab;
+
+  color: #161616;
+}
+.header__search__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: #febd69;
+  border-radius: 0px 5px 5px 0px;
+  height: 42px;
+  border: none;
+  color: #393735;
+  cursor: pointer;
+}
+.header__search__icon:hover {
+  background-color: #ffa631;
+}
+.header__end {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+.cart {
+  text-decoration: none;
+  color: white;
+}
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

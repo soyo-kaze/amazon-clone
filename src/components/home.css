@@ -1,0 +1,26 @@
+.home__body {
+  background-color: #eaeded;
+  /* height: 100%; */
+}
+.upper__bg {
+  display: flex;
+  flex: 1;
+  margin-bottom: -300px;
+  z-index: -1;
+}
+.bg__image {
+  width: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(to top, transparent 10%, black 75%);
+}
+.products__section {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  position: relative;
+  z-index: 100;
+  margin: 5px;
+}
+.products__row {
+  display: flex;
+}

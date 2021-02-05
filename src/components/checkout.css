@@ -1,0 +1,65 @@
+.check__home {
+  background-color: #eaeded;
+}
+.check__head {
+  font-family: Amazon;
+  /* display: flex; */
+  padding: 20px;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+.check__page {
+  font-family: Amazon;
+  display: flex;
+  padding: 10px;
+  /* height: 545px; */
+}
+.left__wing {
+  background: white;
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  height: max-content;
+}
+.left__wing > p {
+  margin: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 27px;
+}
+.space__between {
+  height: 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  color: rgb(116, 115, 115);
+  justify-content: flex-end;
+  font-size: 15px;
+}
+.right__wing {
+  background: white;
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.right__wing > button {
+  width: 100%;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border: 1px solid;
+  margin-top: 10px;
+  color: #111;
+  border-color: #a88734 #9c7e31 #846a29;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 5px;
+}
+.right__wing > button:hover {
+  background: linear-gradient(to bottom, #f7dfa5, #f1b724);
+}

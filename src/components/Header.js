@@ -2,17 +2,19 @@ import React from "react";
 import ReactDom from "react-dom";
 import { Link } from "react-router-dom";
 // import { Container, Button, DropdownButton, Dropdown } from "react-bootstrap";
-import "./header.css";
+import "../styles/header.css";
 import logo from "../assets/amazon1.png";
 
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import SearchIcon from "@material-ui/icons/Search";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
+import { useStateValue } from "./StateProvider";
 
 // import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 const Header = () => {
+  const [{ basket, dispatch }] = useStateValue();
   return (
     <>
       {/* Amazon nav-bar */}
@@ -75,7 +77,7 @@ const Header = () => {
             <div className="header__second">
               <ShoppingCartOutlinedIcon style={{ fontSize: 35 }} />
               <span>
-                <span className="upper__name">0</span>
+                <span className="upper__name">{basket.length}</span>
                 <span className="lower__name">Cart</span>
               </span>
             </div>

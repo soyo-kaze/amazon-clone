@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-import "./home.css";
+import "../styles/home.css";
 
 import bg from "../assets/gaming.jpg";
 import Product from "./Product";
@@ -17,6 +17,7 @@ const Home = () => {
         <div className="products__section">
           <div className="products__row">
             <Product
+              id="12"
               image="https://images-na.ssl-images-amazon.com/images/I/71tbalAHYCL.jpg"
               price={179.99}
               title="This is a title"

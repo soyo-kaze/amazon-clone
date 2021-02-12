@@ -2,9 +2,13 @@ import React from "react";
 import ReactDom from "react-dom";
 import { Link } from "react-router-dom";
 
-import "./checkout.css";
+import "../styles/checkout.css";
+import CheckItem from "./CheckItem";
+import Payout from "./Payout";
+import { useStateValue } from "./StateProvider";
 
 const Checkout = () => {
+  const [{ basket }, dispatch] = useStateValue();
   return (
     <>
       <div style={{ height: 60 }}></div>
@@ -21,8 +25,12 @@ const Checkout = () => {
         </div>
         <div className="check__page">
           <div className="left__wing">
-            <p>Your Amazon Cart is empty.</p>
-            <small>
+            <p>
+              {basket.length === 0
+                ? "Your Amazon Cart is empty."
+                : "Shopping Cart"}
+            </p>
+            <small hidden={basket.length === 0 ? false : true}>
               Check your Saved for later items below or{" "}
               <Link to="/" style={{ textDecoration: "none" }}>
                 continue shopping.
@@ -31,6 +39,15 @@ const Checkout = () => {
             <div className="space__between" style={{ display: "none" }}>
               Price
             </div>
+            {basket.map((item, i) => (
+              <CheckItem
+                some={i}
+                image={item.image}
+                price={item.price}
+                title={item.title}
+                rating={item.rating}
+              />
+            ))}
           </div>
           <div>
             <img
@@ -38,10 +55,7 @@ const Checkout = () => {
               style={{ margin: 10, marginBottom: 0 }}
             />
             <div className="right__wing">
-              <p>
-                Subtotal (3 items): <small>₹</small> <strong>549.00</strong>
-              </p>
-              <button>Proceed to Buy</button>
+              <Payout />
             </div>
           </div>
         </div>

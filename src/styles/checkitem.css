@@ -6,6 +6,7 @@ p {
   margin: 10px;
   padding: 20px;
   max-width: fit-content;
+  transition-delay: 0.4s;
 }
 .checkitem__body > img {
   object-fit: contain;

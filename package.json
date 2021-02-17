@@ -21,6 +21,7 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
+    "firebase": "^8.2.7",
     "parcel-bundler": "^1.12.4"
   }
 }

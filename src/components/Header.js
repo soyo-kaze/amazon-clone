@@ -58,15 +58,17 @@ const Header = () => {
             </span>
           </div>
           {/* sign in option           */}
-          <div className="header__options" style={{ cursor: "pointer" }}>
-            <span className="upper__name">Hello, Guest</span>
-            <span
-              className="lower__name"
-              onClick={() => console.log("clicked")}
-            >
-              Sign in <ArrowDropDownIcon style={{ fontSize: 20 }} />
-            </span>
-          </div>
+          <Link to="/sign-in" class="cart">
+            <div className="header__options" style={{ cursor: "pointer" }}>
+              <span className="upper__name">Hello, Guest</span>
+              <span
+                className="lower__name"
+                onClick={() => console.log("clicked")}
+              >
+                Sign in <ArrowDropDownIcon style={{ fontSize: 20 }} />
+              </span>
+            </div>
+          </Link>
           {/* orders and return option           */}
           <div className="header__options">
             <span className="upper__name">Returns</span>

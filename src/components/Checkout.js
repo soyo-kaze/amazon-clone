@@ -8,7 +8,7 @@ import Payout from "./Payout";
 import { useStateValue } from "./StateProvider";
 
 const Checkout = () => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
   return (
     <>
       <div style={{ height: 60 }}></div>
@@ -25,6 +25,9 @@ const Checkout = () => {
         </div>
         <div className="check__page">
           <div className="left__wing">
+            <h4 style={{ margin: 0, padding: 0, marginBottom: 10 }}>
+              Hello, {user ? user.displayName : "Guest"}
+            </h4>
             <p>
               {basket.length === 0
                 ? "Your Amazon Cart is empty."
@@ -36,8 +39,11 @@ const Checkout = () => {
                 continue shopping.
               </Link>
             </small>
-            <div className="space__between" style={{ display: "none" }}>
-              Price
+            <div
+              className="space__between"
+              style={{ display: basket.length === 0 ? "none" : "flex" }}
+            >
+              <p>Price</p>
             </div>
             {basket.map((item, i) => (
               <CheckItem

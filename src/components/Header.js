@@ -11,10 +11,15 @@ import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import { useStateValue } from "./StateProvider";
 
+import { auth } from "../firebaseConfig";
+
 // import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 const Header = () => {
-  const [{ basket, dispatch }] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+  const handleSignIn = (e) => {
+    auth.signOut();
+  };
   return (
     <>
       {/* Amazon nav-bar */}
@@ -47,7 +52,7 @@ const Header = () => {
         {/* nav right most section */}
         <div className="header__end">
           {/* language change           */}
-          <div className="header__options">
+          {/* <div className="header__options">
             <span className="lower__name">
               <img
                 src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/twitter/259/flag-india_1f1ee-1f1f3.png"
@@ -56,16 +61,16 @@ const Header = () => {
               ></img>
               <ArrowDropDownIcon />
             </span>
-          </div>
+          </div> */}
           {/* sign in option           */}
-          <Link to="/sign-in" class="cart">
+          <Link to={!user && "/login"} class="cart">
             <div className="header__options" style={{ cursor: "pointer" }}>
-              <span className="upper__name">Hello, Guest</span>
-              <span
-                className="lower__name"
-                onClick={() => console.log("clicked")}
-              >
-                Sign in <ArrowDropDownIcon style={{ fontSize: 20 }} />
+              <span className="upper__name">
+                Hello, {user ? user.displayName : "Guest"}
+              </span>
+              <span className="lower__name" onClick={handleSignIn}>
+                {user ? "Sign Out" : "Sign in"}{" "}
+                <ArrowDropDownIcon style={{ fontSize: 20 }} />
               </span>
             </div>
           </Link>

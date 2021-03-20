@@ -19,6 +19,7 @@ p {
   object-fit: contain;
   max-height: 200px;
   width: 100%;
+  /* width: 50vw; */
   margin-bottom: 15px;
   display: flex;
   /* border: 1px solid; */

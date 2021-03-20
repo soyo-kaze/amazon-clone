@@ -1,10 +1,7 @@
 import React from "react";
 import "../styles/Login.css";
 import { Link, useHistory } from "react-router-dom";
-import { auth } from "../firebaseConfig";
-// import signInGoogle from "./signInGoogle";
-import firebase from "firebase/app";
-import "firebase/auth";
+import { auth, googleProvider } from "../firebaseConfig";
 
 import logo from "../assets/amazon2.png";
 
@@ -12,7 +9,6 @@ const Login = () => {
   const [email, setEmail] = React.useState("");
   const [pass, setPass] = React.useState("");
   const history = useHistory();
-  var googleProvider = new firebase.auth.GoogleAuthProvider();
 
   const signInGoogle = (e) => {
     //   const history = useHistory();
@@ -29,7 +25,7 @@ const Login = () => {
   };
 
   const handleSignIn = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // so the page doesn't reloads when data is submitted since that breaks everything..!!
     auth
       .signInWithEmailAndPassword(email, pass)
       .then((auth) => {

@@ -2,7 +2,7 @@
 
 ## Stuff used Till-now:
 
-- React.js
+- React.js :globe_with_meridians:
   - react-router-dom
   - Material-ui (icons only yet)
   - Parcel (bundler)
@@ -10,9 +10,14 @@
   - React-currency-format
 - flex-box (in css)
 - BEM (for naming convention. will see what it is in depth later)
-  <br/>
-  <br>
+- Firebase :fire: (for DataStore)
+  - Auth :closed_lock_with_key:
+  - Sign in with Google :email:
+  - FireStore (TODO)
+    <br/>
+    <br>
 
 ## Todo
 
 - [ ] User profile page
+- [ ] FireStore (to store users basket! :clipboard: )

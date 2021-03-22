@@ -7,6 +7,7 @@ import Home from "./Home";
 import Checkout from "./Checkout";
 import Login from "./Login";
 import SignUp from "./SignUp";
+import UserProfile from "./UserProfile";
 
 import { auth } from "../firebaseConfig";
 import { useStateValue } from "./StateProvider";
@@ -75,6 +76,10 @@ const App = () => {
           </Route>
           <Route path="/sign-up">
             <SignUp />
+          </Route>
+          <Route path="/user">
+            <Header />
+            <UserProfile />
           </Route>
           <Route exact path="/">
             <Header />

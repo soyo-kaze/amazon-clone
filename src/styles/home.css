@@ -12,6 +12,7 @@
   width: 100%;
   object-fit: cover;
   mask-image: linear-gradient(to top, transparent 10%, black 75%);
+  -webkit-mask-image: linear-gradient(to top, transparent 10%, black 75%);
 }
 .products__section {
   display: flex;

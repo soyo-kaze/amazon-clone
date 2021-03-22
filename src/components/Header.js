@@ -63,17 +63,19 @@ const Header = () => {
             </span>
           </div> */}
           {/* sign in option           */}
-          <Link to={!user && "/login"} class="cart">
-            <div className="header__options" style={{ cursor: "pointer" }}>
+          <div className="header__options" style={{ cursor: "pointer" }}>
+            <Link to="/user" class="cart">
               <span className="upper__name">
                 Hello, {user ? user.displayName : "Guest"}
               </span>
+            </Link>
+            <Link to={!user && "/login"} class="cart">
               <span className="lower__name" onClick={handleSignIn}>
                 {user ? "Sign Out" : "Sign in"}{" "}
                 <ArrowDropDownIcon style={{ fontSize: 20 }} />
               </span>
-            </div>
-          </Link>
+            </Link>
+          </div>
           {/* orders and return option           */}
           <div className="header__options">
             <span className="upper__name">Returns</span>

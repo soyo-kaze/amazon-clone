@@ -1,0 +1,35 @@
+.user__profile {
+  background-color: #eaeded;
+  font-family: "amazon";
+}
+.profile__wall {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  width: 100%;
+  height: 250px;
+}
+.profile__info {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  margin-bottom: 10px;
+  align-items: center;
+  /* justify-content: center; */
+  /* height: 500px; */
+}
+.profile__pic > img {
+  object-fit: cover;
+  width: 250px;
+  border-radius: 50%;
+}
+.profile__pic {
+  background: white;
+  margin-top: -20vh;
+  padding: 3px;
+  border-radius: 50%;
+  object-fit: cover;
+  height: fit-content;
+  width: fit-content;
+}

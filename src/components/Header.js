@@ -64,7 +64,7 @@ const Header = () => {
           </div> */}
           {/* sign in option           */}
           <div className="header__options" style={{ cursor: "pointer" }}>
-            <Link to="/user" class="cart">
+            <Link to={!!user && "/user"} class="cart">
               <span className="upper__name">
                 Hello, {user ? user.displayName : "Guest"}
               </span>

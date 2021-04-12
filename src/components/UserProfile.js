@@ -1,6 +1,9 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
+import "../styles/userProfile.css";
+import bg from "../assets/gaming.jpg";
+import dp from "../assets/pic.png";
 
 const UserProfile = () => {
   const [{ user }, dispatch] = useStateValue();
@@ -26,18 +29,27 @@ const UserProfile = () => {
     </>
   ) : (
     <>
-      <div>
+      <div class="user__profile">
         <div style={{ height: 60 }}></div>
-        <h1
-          style={{
-            display: "flex",
-            alignItems: "center",
-            width: "100%",
-            justifyContent: "center",
-          }}
-        >
-          Welcome {user.displayName}
-        </h1>
+        <div class="profile__wall" style={{ backgroundImage: `url(${bg})` }}>
+          {/* for profile wallpaper */}
+        </div>
+        <div class="profile__info">
+          <div class="profile__pic">
+            <img src={dp} alt="profile-pic" />
+          </div>
+          <h1
+            style={{
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              justifyContent: "center",
+              margin: 0,
+            }}
+          >
+            {user.displayName}
+          </h1>
+        </div>
       </div>
     </>
   );
